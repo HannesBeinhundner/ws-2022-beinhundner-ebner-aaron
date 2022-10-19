@@ -2,13 +2,13 @@ header {
     background-image: url("../../images/header_2560px_edited.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right 5% top 50%;
-    height: 60vh;
+    background-position: center 10%;
+    height: 70vh;
     a {
         text-decoration: none;
     }
     h1 {
-        font-size: 1rem;
+        font-size: 1.37rem;
         color: $white;
         text-transform: uppercase;
         font-weight: 600;
@@ -19,19 +19,63 @@ header {
     }
     .headerMainContainer {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr;
         .headerText {
-            grid-column-start: 2;
+            grid-column-start: 1;
             grid-row-start: 2;
+            margin-left: 6rem;
             h2 {
-                font-size: 2.3rem;
+                font-size: 4.25rem;
                 color: $orange-light;
                 margin-bottom: 30px;
             }
             #headerButton {
                 background-color: black;
                 color: $white;
+            }
+        }
+    }
+}
+
+@include breakpoint(0, $mobile) {
+    header {
+        background-image: url("../../images/header_2560px_edited.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center right;
+        height: 60vh;
+        a {
+            text-decoration: none;
+        }
+        h1 {
+            font-size: 1rem;
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 600;
+            #h1Small {
+                font-weight: 300;
+                text-transform: none;
+            }
+        }
+        .headerMainContainer {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 3fr 1fr;
+            .headerText {
+                // background-color: red;
+                grid-column-start: 1;
+                grid-row-start: 2;
+                margin-left: 1rem;
+                h2 {
+                    font-size: 2.3rem;
+                    color: $orange-light;
+                    margin-bottom: 30px;
+                }
+                #headerButton {
+                    background-color: black;
+                    color: $white;
+                }
             }
         }
     }

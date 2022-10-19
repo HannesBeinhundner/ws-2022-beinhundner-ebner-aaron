@@ -121,23 +121,23 @@ body {
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 4.25rem;
   color: hsl(26deg, 62%, 56.7%);
   font-weight: 300;
   margin-bottom: 2rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 2.37rem;
   color: hsl(26deg, 62%, 56.7%);
   font-weight: 300;
-  padding: 0.5rem 0rem 0.75rem 0.75rem;
+  padding: 1.5rem 0rem 1.5rem 1.25rem;
 }
 
 .super-headline {
   text-transform: uppercase;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.37rem;
+  font-weight: 600;
   color: hsl(0deg, 0%, 21%);
 }
 
@@ -158,6 +158,18 @@ p {
   letter-spacing: 0.24px;
 }
 
+@media (min-width: 0rem) and (max-width: 37.4375rem) {
+  .super-headline {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    padding: 0.5rem 0rem 0.5rem 0.75rem;
+  }
+}
 @media (min-width: 0rem) and (max-width: 37.4375rem) {
   #hamburger {
     width: 24px;
@@ -210,16 +222,40 @@ p {
   align-items: center;
   padding: 1rem;
 }
+.topNavContainer #mainnav {
+  display: flex;
+  align-items: center;
+}
+.topNavContainer #mainnav #hamburger {
+  visibility: hidden;
+}
+.topNavContainer #mainnav ul {
+  display: flex;
+  justify-content: space-between;
+}
+.topNavContainer #mainnav ul li {
+  padding: 0rem 0.5rem 0rem 0.5rem;
+}
+.topNavContainer #mainnav ul li a {
+  color: hsl(26deg, 82%, 65%);
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+}
 
 @media (min-width: 0rem) and (max-width: 37.4375rem) {
-  #mainnav {
+  .topNavContainer #mainnav {
     position: fixed;
     z-index: 100;
     right: 0;
     top: 0;
     padding: 1rem;
   }
-  #mainnav ul {
+  .topNavContainer #mainnav #hamburger {
+    visibility: visible;
+  }
+  .topNavContainer #mainnav ul {
+    display: block;
     position: fixed;
     padding: 3rem 1rem 1rem 1rem;
     width: 100vw;
@@ -230,13 +266,13 @@ p {
     background-color: hsl(0deg, 0%, 21%);
     box-shadow: -5px 0 10px 0 rgba(0, 0, 0, 0.1);
   }
-  #mainnav ul li {
+  .topNavContainer #mainnav ul li {
     font-size: 1.37rem;
     text-align: right;
     padding: 1rem 0 1rem 0;
     text-decoration: none;
   }
-  #mainnav ul li a {
+  .topNavContainer #mainnav ul li a {
     text-decoration: none;
     color: hsl(0deg, 0%, 100%);
   }
@@ -245,14 +281,14 @@ header {
   background-image: url("../../images/header_2560px_edited.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right 5% top 50%;
-  height: 60vh;
+  background-position: center 10%;
+  height: 70vh;
 }
 header a {
   text-decoration: none;
 }
 header h1 {
-  font-size: 1rem;
+  font-size: 1.37rem;
   color: hsl(0deg, 0%, 100%);
   text-transform: uppercase;
   font-weight: 600;
@@ -263,15 +299,16 @@ header h1 #h1Small {
 }
 header .headerMainContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr;
 }
 header .headerMainContainer .headerText {
-  grid-column-start: 2;
+  grid-column-start: 1;
   grid-row-start: 2;
+  margin-left: 6rem;
 }
 header .headerMainContainer .headerText h2 {
-  font-size: 2.3rem;
+  font-size: 4.25rem;
   color: hsl(26deg, 100%, 72%);
   margin-bottom: 30px;
 }
@@ -280,60 +317,101 @@ header .headerMainContainer .headerText #headerButton {
   color: hsl(0deg, 0%, 100%);
 }
 
-#workshops .level {
-  display: grid;
-  grid-template-columns: 5fr 1fr;
-  grid-template-rows: 20px auto auto;
-  grid-template-areas: "_image _image apply" "_text _text apply" "quote quote apply";
-  background-color: hsl(0deg, 0%, 21%);
-  margin-top: 100px;
+@media (min-width: 0rem) and (max-width: 37.4375rem) {
+  header {
+    background-image: url("../../images/header_2560px_edited.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    height: 60vh;
+  }
+  header a {
+    text-decoration: none;
+  }
+  header h1 {
+    font-size: 1rem;
+    color: hsl(0deg, 0%, 100%);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  header h1 #h1Small {
+    font-weight: 300;
+    text-transform: none;
+  }
+  header .headerMainContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr;
+  }
+  header .headerMainContainer .headerText {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    margin-left: 1rem;
+  }
+  header .headerMainContainer .headerText h2 {
+    font-size: 2.3rem;
+    color: hsl(26deg, 100%, 72%);
+    margin-bottom: 30px;
+  }
+  header .headerMainContainer .headerText #headerButton {
+    background-color: black;
+    color: hsl(0deg, 0%, 100%);
+  }
 }
-#workshops .level .imageContainer {
+#workshops .levelContainer {
+  display: grid;
+  grid-template-columns: 1.6fr 0.4fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2.25rem 2.2rem;
+  grid-template-areas: "level3 apply" "level2 register" "level1 register";
+}
+#workshops .levelContainer #level3 {
+  display: grid;
+  background-color: hsl(0deg, 0%, 21%);
+  grid-template-columns: 0.4fr 1.8fr 0.9fr 0.9fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "number _text _image quote" "number _text _image quote" "number _text _image quote";
+  grid-area: level3;
+  height: 100%;
+}
+#workshops .levelContainer #level3 .numberContainer {
+  background-color: hsl(0deg, 0%, 100%);
+  grid-area: number;
+  padding: 2px;
+  color: hsl(0deg, 0%, 21%);
+  font-weight: 600;
+  font-size: 18.7rem;
+  text-align: right;
+}
+#workshops .levelContainer #level3 .imageContainer {
   grid-area: _image;
   justify-self: center;
-  position: relative;
-  bottom: 110px;
+  place-self: center;
 }
-#workshops .level .imageContainer .number {
-  background-color: hsl(0deg, 0%, 84%);
-  width: 40px;
-  height: 40px;
-  padding: 6px;
-  color: hsl(26deg, 62%, 56.7%);
-  font-weight: 600;
-  font-size: 1.75rem;
-  text-align: center;
-  border-radius: 50%;
-  position: relative;
-  left: 104px;
-  top: 27px;
-}
-#workshops .level .imageContainer .imgCircle {
+#workshops .levelContainer #level3 .imageContainer .imgCircle {
   background-color: hsl(0deg, 0%, 35%);
   border-radius: 50%;
   padding: 1.7rem;
-  position: relative;
-  z-index: 10;
 }
-#workshops .level .imageContainer .imgCircle img {
-  width: 80px;
+#workshops .levelContainer #level3 .imageContainer .imgCircle img {
+  width: 170px;
 }
-#workshops .level .textContainer {
+#workshops .levelContainer #level3 .textContainer {
   grid-area: _text;
-  padding: 1rem;
-  margin-top: 70px;
+  padding: 3rem;
 }
-#workshops .level .textContainer h3 {
+#workshops .levelContainer #level3 .textContainer h3 {
   padding: 0.5rem 0rem 0.75rem 0rem;
 }
-#workshops .level .textContainer p {
+#workshops .levelContainer #level3 .textContainer p {
   margin-bottom: 1.5rem;
   color: hsl(0deg, 0%, 100%);
 }
-#workshops .level .textContainer .button {
+#workshops .levelContainer #level3 .textContainer .button {
   color: hsl(0deg, 0%, 100%);
 }
-#workshops .level .quoteContainer {
+#workshops .levelContainer #level3 .quoteContainer {
   grid-area: quote;
   justify-self: center;
   display: flex;
@@ -341,35 +419,326 @@ header .headerMainContainer .headerText #headerButton {
   flex-direction: column;
   padding: 2.5rem;
 }
-#workshops .level .quoteContainer img {
-  width: 70px;
+#workshops .levelContainer #level3 .quoteContainer img {
+  width: 140px;
+  position: relative;
+  bottom: -170px;
+  right: -58px;
 }
-#workshops .level .quoteContainer blockquote {
-  font-size: 1.3rem;
+#workshops .levelContainer #level3 .quoteContainer blockquote {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
   font-weight: 300;
   color: hsl(0deg, 0%, 100%);
-  margin-top: 0.5rem;
+  position: relative;
+  top: -90px;
 }
-#workshops .level .applyContainer {
-  grid-area: apply;
-  padding: 1rem 0rem 0rem 0rem;
+#workshops .levelContainer #applyWorkshop {
   background-color: hsl(0deg, 0%, 97%);
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
+  grid-area: apply;
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: hsl(0deg, 0%, 97%);
   color: hsl(0deg, 0%, 10%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 332px;
+}
+#workshops .levelContainer #applyWorkshop p {
+  font-size: 2rem;
+  text-align: center;
+}
+#workshops .levelContainer #level2 {
+  display: grid;
+  background-color: hsl(0deg, 0%, 21%);
+  grid-template-columns: 0.4fr 0.9fr 0.9fr 1.8fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "number quote _image _text" "number quote _image _text" "number quote _image _text";
+  grid-area: level2;
+  height: 332px;
+}
+#workshops .levelContainer #level2 .numberContainer {
+  background-color: hsl(0deg, 0%, 100%);
+  grid-area: number;
+  padding: 2px;
+  color: hsl(0deg, 0%, 21%);
+  font-weight: 600;
+  font-size: 18.7rem;
+  text-align: right;
+}
+#workshops .levelContainer #level2 .imageContainer {
+  grid-area: _image;
+  justify-self: center;
+  place-self: center;
+}
+#workshops .levelContainer #level2 .imageContainer .imgCircle {
+  background-color: hsl(0deg, 0%, 35%);
+  border-radius: 50%;
+  padding: 1.7rem;
+}
+#workshops .levelContainer #level2 .imageContainer .imgCircle img {
+  width: 170px;
+}
+#workshops .levelContainer #level2 .textContainer {
+  grid-area: _text;
+  padding: 3rem;
+}
+#workshops .levelContainer #level2 .textContainer h3 {
+  padding: 0.5rem 0rem 0.75rem 0rem;
+}
+#workshops .levelContainer #level2 .textContainer p {
+  margin-bottom: 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+}
+#workshops .levelContainer #level2 .textContainer .button {
+  color: hsl(0deg, 0%, 100%);
+}
+#workshops .levelContainer #level2 .quoteContainer {
+  grid-area: quote;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5rem;
+}
+#workshops .levelContainer #level2 .quoteContainer img {
+  width: 140px;
+  position: relative;
+  bottom: 40px;
+  right: -58px;
+}
+#workshops .levelContainer #level2 .quoteContainer blockquote {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 300;
+  color: hsl(0deg, 0%, 100%);
+  position: relative;
+  top: -10px;
+}
+#workshops .levelContainer #level1 {
+  display: grid;
+  background-color: hsl(0deg, 0%, 21%);
+  grid-template-columns: 0.4fr 0.9fr 1.8fr 0.9fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "number _image _text quote" "number _image _text quote" "number _image _text quote";
+  grid-area: level1;
+  height: 332px;
+}
+#workshops .levelContainer #level1 .numberContainer {
+  background-color: hsl(0deg, 0%, 100%);
+  grid-area: number;
+  padding: 2px;
+  color: hsl(0deg, 0%, 21%);
+  font-weight: 600;
+  font-size: 18.7rem;
+  text-align: right;
+}
+#workshops .levelContainer #level1 .imageContainer {
+  grid-area: _image;
+  justify-self: center;
+  place-self: center;
+}
+#workshops .levelContainer #level1 .imageContainer .imgCircle {
+  background-color: hsl(0deg, 0%, 35%);
+  border-radius: 50%;
+  padding: 1.7rem;
+}
+#workshops .levelContainer #level1 .imageContainer .imgCircle img {
+  width: 170px;
+}
+#workshops .levelContainer #level1 .textContainer {
+  grid-area: _text;
+  padding: 3rem;
+}
+#workshops .levelContainer #level1 .textContainer h3 {
+  padding: 0.5rem 0rem 0.75rem 0rem;
+}
+#workshops .levelContainer #level1 .textContainer p {
+  margin-bottom: 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+}
+#workshops .levelContainer #level1 .textContainer .button {
+  color: hsl(0deg, 0%, 100%);
+}
+#workshops .levelContainer #level1 .quoteContainer {
+  grid-area: quote;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5rem;
+}
+#workshops .levelContainer #level1 .quoteContainer img {
+  width: 140px;
+  position: relative;
+  bottom: -170px;
+  right: -58px;
+}
+#workshops .levelContainer #level1 .quoteContainer blockquote {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 300;
+  color: hsl(0deg, 0%, 100%);
+  position: relative;
+  top: -90px;
+}
+#workshops .levelContainer #registerContainer1 {
+  display: none;
+  height: 0px;
+  width: 0px;
+  grid-area: register;
+}
+#workshops .levelContainer #registerContainer2 {
+  grid-area: register;
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: hsl(0deg, 0%, 97%);
+  color: hsl(0deg, 0%, 10%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+#workshops .levelContainer #registerContainer2 p {
+  font-size: 2rem;
+  text-align: center;
 }
 
+@media (min-width: 0rem) and (max-width: 37.4375rem) {
+  #workshops .levelContainer .level,
+#workshops .levelContainer #level3,
+#workshops .levelContainer #level2,
+#workshops .levelContainer #level1 {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 20px auto auto;
+    grid-template-areas: "_image _image apply" "_text _text apply" "quote quote apply";
+    background-color: hsl(0deg, 0%, 21%);
+    margin-top: 100px;
+  }
+  #workshops .levelContainer .level .numberContainer,
+#workshops .levelContainer #level3 .numberContainer,
+#workshops .levelContainer #level2 .numberContainer,
+#workshops .levelContainer #level1 .numberContainer {
+    grid-area: _image;
+    background-color: hsl(0deg, 0%, 84%);
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+    color: hsl(26deg, 62%, 56.7%);
+    font-weight: 600;
+    font-size: 1.75rem;
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+    left: 55%;
+    top: -75px;
+  }
+  #workshops .levelContainer .level .imageContainer,
+#workshops .levelContainer #level3 .imageContainer,
+#workshops .levelContainer #level2 .imageContainer,
+#workshops .levelContainer #level1 .imageContainer {
+    grid-area: _image;
+    justify-self: center;
+    position: relative;
+    bottom: 70px;
+  }
+  #workshops .levelContainer .level .imageContainer .imgCircle,
+#workshops .levelContainer #level3 .imageContainer .imgCircle,
+#workshops .levelContainer #level2 .imageContainer .imgCircle,
+#workshops .levelContainer #level1 .imageContainer .imgCircle {
+    background-color: hsl(0deg, 0%, 35%);
+    border-radius: 50%;
+    padding: 1.7rem;
+    position: relative;
+    z-index: 10;
+  }
+  #workshops .levelContainer .level .imageContainer .imgCircle img,
+#workshops .levelContainer #level3 .imageContainer .imgCircle img,
+#workshops .levelContainer #level2 .imageContainer .imgCircle img,
+#workshops .levelContainer #level1 .imageContainer .imgCircle img {
+    width: 80px;
+  }
+  #workshops .levelContainer .level .textContainer,
+#workshops .levelContainer #level3 .textContainer,
+#workshops .levelContainer #level2 .textContainer,
+#workshops .levelContainer #level1 .textContainer {
+    grid-area: _text;
+    padding: 1rem;
+    margin-top: 70px;
+  }
+  #workshops .levelContainer .level .textContainer h3,
+#workshops .levelContainer #level3 .textContainer h3,
+#workshops .levelContainer #level2 .textContainer h3,
+#workshops .levelContainer #level1 .textContainer h3 {
+    padding: 0.5rem 0rem 0.75rem 0rem;
+  }
+  #workshops .levelContainer .level .textContainer p,
+#workshops .levelContainer #level3 .textContainer p,
+#workshops .levelContainer #level2 .textContainer p,
+#workshops .levelContainer #level1 .textContainer p {
+    margin-bottom: 1.5rem;
+  }
+  #workshops .levelContainer .level .quoteContainer,
+#workshops .levelContainer #level3 .quoteContainer,
+#workshops .levelContainer #level2 .quoteContainer,
+#workshops .levelContainer #level1 .quoteContainer {
+    grid-area: quote;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.5rem;
+  }
+  #workshops .levelContainer .level .quoteContainer img,
+#workshops .levelContainer #level3 .quoteContainer img,
+#workshops .levelContainer #level2 .quoteContainer img,
+#workshops .levelContainer #level1 .quoteContainer img {
+    width: 70px;
+  }
+  #workshops .levelContainer .level .quoteContainer blockquote,
+#workshops .levelContainer #level3 .quoteContainer blockquote,
+#workshops .levelContainer #level2 .quoteContainer blockquote,
+#workshops .levelContainer #level1 .quoteContainer blockquote {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+  }
+  #workshops .levelContainer .level .applyContainer,
+#workshops .levelContainer #level3 .applyContainer,
+#workshops .levelContainer #level2 .applyContainer,
+#workshops .levelContainer #level1 .applyContainer {
+    grid-area: apply;
+    padding: 1rem 0rem 0rem 0rem;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+}
 #about {
   background-color: hsl(23deg, 100%, 97%);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-content: center;
-  flex-direction: column;
-  padding: 100px 0px 100px 0px;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 8rem 2rem 11rem 2rem;
+}
+#about .imgContainer {
+  width: 50%;
+}
+#about .imgContainer img {
+  width: 100%;
 }
 #about .aboutTextContainer {
   padding: 0px 1rem 0px 1rem;
+  min-width: 50%;
+  max-width: 550px;
+  text-align: left;
   margin-top: 2rem;
+}
+#about .aboutTextContainer p {
+  max-width: 590px;
+  font-size: 1.37rem;
 }
 #about .aboutTextContainer h2 {
   margin-top: 0.2rem;
@@ -379,50 +748,116 @@ header .headerMainContainer .headerText #headerButton {
   margin-bottom: 3rem;
 }
 
+@media (min-width: 0rem) and (max-width: 37.4375rem) {
+  #about {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0px 5rem 0px;
+  }
+  #about .imgContainer {
+    width: 100%;
+  }
+  #about .imgContainer img {
+    max-height: 458px;
+    object-fit: cover;
+  }
+  #about .aboutTextContainer {
+    padding: 0px 1rem 0px 1rem;
+    margin-top: 1rem;
+    min-width: 100%;
+  }
+  #about .aboutTextContainer p {
+    max-width: 550px;
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  #about .aboutTextContainer h2 {
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
+  }
+  #about .aboutTextContainer p:nth-of-type(2) {
+    margin-bottom: 3rem;
+  }
+}
 #news {
-  margin-top: 3rem;
+  margin-top: 8rem;
 }
 #news .newsHeadline {
-  padding: 0px 1rem 0px 1rem;
+  padding: 0px 1rem 0px 2rem;
 }
 #news .articleContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
 }
 #news .articleContainer article {
   background-color: hsl(0deg, 0%, 97%);
-  width: 93%;
+  width: 575px;
   margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 #news .articleContainer article img {
   width: 100%;
+  height: 337px;
+  object-fit: cover;
 }
 #news .articleContainer article .arcticleTextContainer {
-  padding: 1rem 1rem 3.5rem 1rem;
+  padding: 1.5rem 1rem 3.5rem 1.5rem;
 }
-#news .articleContainer article p {
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
+#news .articleContainer article .arcticleTextContainer p {
+  font-size: 1.37rem;
+  margin-bottom: 2rem;
 }
 
+@media (min-width: 0rem) and (max-width: 37.4375rem) {
+  #news {
+    margin-top: 3rem;
+  }
+  #news .newsHeadline {
+    padding: 0px 1rem 0px 1rem;
+  }
+  #news .articleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #news .articleContainer article {
+    width: 93%;
+    margin-bottom: 2rem;
+  }
+  #news .articleContainer article img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  #news .articleContainer article .arcticleTextContainer {
+    padding: 1rem 1rem 3.5rem 1rem;
+  }
+  #news .articleContainer article .arcticleTextContainer p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+}
 footer {
   background-color: hsl(0deg, 0%, 21%);
   display: flex;
   justify-content: space-between;
-  padding: 1rem 0rem 2rem 2rem;
+  padding: 1rem 2rem 2rem 2rem;
 }
 footer h4 {
-  font-size: 1.2rem;
+  font-size: 2.37rem;
   color: hsl(0deg, 0%, 100%);
   font-weight: 300;
 }
 footer p {
+  font-size: 1.37rem;
   color: hsl(0deg, 0%, 100%);
   font-weight: 300;
 }
 footer a {
+  font-size: 1.37rem;
   text-decoration: none;
   color: hsl(26deg, 82%, 65%);
 }
@@ -430,6 +865,15 @@ footer a {
 @media (min-width: 0rem) and (max-width: 37.4375rem) {
   footer {
     flex-direction: column;
+  }
+  footer h4 {
+    font-size: 1.37rem;
+  }
+  footer p {
+    font-size: 1rem;
+  }
+  footer a {
+    font-size: 1rem;
   }
 }
 

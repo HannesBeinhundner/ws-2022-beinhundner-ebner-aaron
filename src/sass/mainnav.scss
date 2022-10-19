@@ -3,21 +3,24 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    // #mainnav {
-    //     // #hamburger {
-    //     //     visibility: hidden;
-    //     // }
-    //     ul {
-    //         display: flex;
-    //         justify-content: space-between;
-    //         li {
-    //             padding: 0 0.5rem 0 0.5rem;
-    //             a {
-    //                 color: $orange-middle;
-    //                 text-transform: uppercase;
-    //                 text-decoration: underline;
-    //             }
-    //         }
-    //     }
-    // }
+    #mainnav {
+        display: flex;
+        align-items: center;
+        #hamburger {
+            visibility: hidden;
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            li {
+                padding: 0rem 0.5rem 0rem 0.5rem;
+                a {
+                    color: $orange-middle;
+                    text-transform: uppercase;
+                    text-decoration: underline;
+                    text-underline-offset: 0.4rem;
+                }
+            }
+        }
+    }
 }
