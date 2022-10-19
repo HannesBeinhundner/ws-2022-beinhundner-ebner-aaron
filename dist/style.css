@@ -358,6 +358,9 @@ header .headerMainContainer .headerText #headerButton {
     color: hsl(0deg, 0%, 100%);
   }
 }
+#workshops {
+  padding: 0px 2rem 0px 2rem;
+}
 #workshops .levelContainer {
   display: grid;
   grid-template-columns: 1.6fr 0.4fr;
@@ -606,6 +609,9 @@ header .headerMainContainer .headerText #headerButton {
 }
 
 @media (min-width: 0rem) and (max-width: 37.4375rem) {
+  #workshops {
+    padding: 0px 0rem 0px 0rem;
+  }
   #workshops .levelContainer .level,
 #workshops .levelContainer #level3,
 #workshops .levelContainer #level2,
