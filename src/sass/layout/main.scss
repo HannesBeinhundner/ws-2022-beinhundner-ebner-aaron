@@ -1,5 +1,4 @@
 #workshops {
-    padding: 0px 2rem 0px 2rem;
     .levelContainer {
         display: grid;
         grid-template-columns: 1.6fr 0.4fr;
@@ -288,7 +287,6 @@
 
 @include breakpoint(0, $mobile) {
     #workshops {
-        padding: 0px 0rem 0px 0rem;
         .levelContainer {
             .level,
             #level3,

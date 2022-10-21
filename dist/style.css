@@ -383,9 +383,13 @@ header .headerMainContainer .headerText #headerButton {
   grid-area: number;
   padding: 2px;
   color: hsl(0deg, 0%, 21%);
+  display: flex;
+  align-items: flex-start;
+  justify-items: flex-end;
+}
+#workshops .levelContainer #level3 .numberContainer p {
   font-weight: 600;
   font-size: 18.7rem;
-  text-align: right;
 }
 #workshops .levelContainer #level3 .imageContainer {
   grid-area: _image;
